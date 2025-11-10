@@ -1,0 +1,236 @@
+/* =====================================
+   ESTILOS GERAIS
+   ===================================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Fundo suave */
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o box-shadow seja contido */
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background-color: #e0f2f1; /* Cor suave para cabeçalho */
+    border-bottom: 2px solid #b2dfdb;
+}
+
+header h1 {
+    color: #004d40; /* Verde escuro */
+    margin-bottom: 5px;
+    font-size: 2.5em;
+}
+
+header p {
+    font-style: italic;
+    color: #555;
+}
+
+/* =====================================
+   ESTILO DA CONTAGEM REGRESSIVA (CountdownTimer)
+   ===================================== */
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    margin-top: 15px;
+    border-top: 1px dashed #b2dfdb;
+}
+
+.countdown-display div {
+    text-align: center;
+    color: #004d40;
+}
+
+.countdown-display span {
+    font-size: 2.8em;
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+.countdown-display p {
+    margin: 5px 0 0;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    color: #555;
+}
+
+/* =====================================
+   ESTILO DAS ABAS (NAVEGAÇÃO)
+   ===================================== */
+.tab-menu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #004d40; /* Fundo do menu verde escuro */
+}
+
+.tab-menu li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.tab-button {
+    width: 100%;
+    border: none;
+    background: none;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1em;
+}
+
+.tab-button:hover:not(.active) {
+    background-color: #00695c;
+}
+
+.tab-button.active {
+    background-color: #b2dfdb; /* Cor de destaque para a aba ativa */
+    color: #004d40;
+}
+
+/* =====================================
+   CONTEÚDO DAS ABAS
+   ===================================== */
+.tab-content {
+    padding: 30px;
+}
+
+.tab-pane h2 {
+    color: #004d40;
+    border-bottom: 2px solid #b2dfdb;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Estilo para links externos/botões */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: #004d40;
+    color: white !important; /* Força cor branca */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #00695c;
+}
+
+/* Estilo para Mapa (Placeholder) */
+.map-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    color: #777;
+    font-style: italic;
+}
+
+/* =====================================
+   ESTILO DO FORMULÁRIO RSVP
+   ===================================== */
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px; /* Limita a largura do formulário */
+    margin: 20px 0;
+}
+
+.rsvp-form label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #004d40;
+}
+
+.rsvp-form input[type="text"], 
+.rsvp-form input[type="number"],
+.rsvp-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.rsvp-form textarea {
+    resize: vertical;
+}
+
+.rsvp-form button[type="submit"] {
+    background-color: #004d40;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 25px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.rsvp-form button[type="submit"]:hover:not(:disabled) {
+    background-color: #00695c;
+}
+
+.rsvp-form button[type="submit"]:disabled {
+    background-color: #a5d6a7; /* Cor clara quando desabilitado (carregando) */
+    cursor: not-allowed;
+}
+
+
+/* =====================================
+   RESPONSIVIDADE
+   ===================================== */
+@media (max-width: 768px) {
+    .container {
+        margin: 0;
+        border-radius: 0;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .tab-menu {
+        flex-wrap: wrap; /* Permite que as abas quebrem a linha */
+    }
+    .tab-menu li {
+        width: 50%; /* Duas abas por linha em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-menu li {
+        width: 100%; /* Uma aba por linha em telas muito pequenas */
+    }
+    .countdown-display {
+        gap: 15px;
+    }
+    .countdown-display span {
+        font-size: 2em;
+    }
+}
