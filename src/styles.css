@@ -371,3 +371,26 @@ iframe {
     width: 100%;
     display: block;
 }
+
+.countdown{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0 8px;
+}
+
+.countdown-item {
+    flex: 1 1 70px;
+    min-width: 70px;
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    .countdown-item {
+        flex: 1 1 60px;
+        font-size: 0.9rem;
+    }
+}
