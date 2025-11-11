@@ -90,18 +90,6 @@ const RSVPForm = () => {
                 disabled={isLoading}
             />
 
-            <label htmlFor="convidados">Total de Pessoas (incluindo você):</label>
-            <input 
-                type="number" 
-                id="convidados" 
-                name="convidados"
-                value={formData.convidados}
-                onChange={handleChange}
-                min="1"
-                required 
-                disabled={isLoading}
-            />
-
             <label htmlFor="mensagem">Deixe uma mensagem para os noivos (Opcional):</label>
             <textarea
                 id="mensagem"

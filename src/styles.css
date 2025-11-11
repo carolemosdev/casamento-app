@@ -1,236 +1,334 @@
-/* =====================================
-   ESTILOS GERAIS
-   ===================================== */
+/* styles.css */
+
+/* --- Importação de Fontes do Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;600;700&display=swap');
+
+/* --- Variáveis CSS para Cores (Paleta Verde Sálvia/Orgânica) --- */
+:root {
+    --color-background-subtle: #FDFCF9;
+    --color-text-primary: #5A6D60;
+    --color-text-secondary: #8FA295;
+    --color-accent: #5A6D60;
+    --color-text-body: #4F4F4F;
+}
+
+/* --- ESTILOS GERAIS --- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7; /* Fundo suave */
-    color: #333;
+    background-color: var(--color-background-subtle);
+    color: var(--color-text-body);
+    line-height: 1.6;
 }
 
 .container {
-    max-width: 900px;
-    margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden; /* Garante que o box-shadow seja contido */
+    width: 100%; 
+    margin: 0; 
+    min-height: 100vh;
+    background-color: var(--color-background-subtle);
+    background-image: url('https://i.imgur.com/G4hU07k.png'); 
+    background-size: cover;
+    background-position: center;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
 }
 
+.content-wrapper {
+    max-width: 900px; 
+    width: 100%; /* Ocupa 100% da largura máxima permitida */
+    margin: 0 auto; 
+    background-color: #fff; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- ESTILOS DO CABEÇALHO --- */
 header {
     text-align: center;
-    padding: 40px 20px 20px;
-    background-color: #e0f2f1; /* Cor suave para cabeçalho */
-    border-bottom: 2px solid #b2dfdb;
+    padding: 60px 20px 30px;
+    background-color: transparent; 
 }
 
 header h1 {
-    color: #004d40; /* Verde escuro */
+    font-family: 'Playfair Display', serif; 
+    color: var(--color-text-primary);
+    margin: 0 0 10px 0; 
+    font-size: 3.8em; 
+    font-style: italic; 
+    font-weight: 500;
+}
+
+header p { 
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-text-secondary);
+    font-size: 0.9em;
+    letter-spacing: 3px; 
+    text-transform: uppercase;
     margin-bottom: 5px;
-    font-size: 2.5em;
 }
 
-header p {
-    font-style: italic;
-    color: #555;
+.countdown-timer-container { 
+    margin-top: 20px; 
+    padding-top: 15px;
+    border-top: 1px solid rgba(90, 109, 96, 0.3); 
+    display: inline-block; 
 }
 
-/* =====================================
-   ESTILO DA CONTAGEM REGRESSIVA (CountdownTimer)
-   ===================================== */
 .countdown-display {
-    display: flex;
     justify-content: center;
-    gap: 30px;
-    padding: 15px 0;
-    margin-top: 15px;
-    border-top: 1px dashed #b2dfdb;
+    gap: 15px; 
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--color-text-primary); 
 }
 
 .countdown-display div {
-    text-align: center;
-    color: #004d40;
+    padding: 5px 10px;
+    background-color: rgba(90, 109, 96, 0.05); 
+    border-radius: 4px;
+    text-align: center; 
 }
 
 .countdown-display span {
-    font-size: 2.8em;
-    font-weight: bold;
     display: block;
-    line-height: 1;
-}
-
-.countdown-display p {
-    margin: 5px 0 0;
-    font-size: 0.85em;
+    font-size: 0.5em; 
+    color: var(--color-text-secondary); 
+    font-weight: 400;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    color: #555;
 }
 
-/* =====================================
-   ESTILO DAS ABAS (NAVEGAÇÃO)
-   ===================================== */
+
+/* --- ESTILOS DO MENU DE ABAS (CORRIGIDO PARA ESTABILIDADE) --- */
 .tab-menu {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: #004d40; /* Fundo do menu verde escuro */
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  padding: 15px 10px;
+  margin: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tab-menu::-webkit-scrollbar {
+  display: none;             /* Chrome remove scroll */
 }
 
 .tab-menu li {
-    flex-grow: 1;
-    text-align: center;
+    flex: 1; /* Agora cada aba ocupa o mesmo espaço automaticamente */
 }
 
 .tab-button {
-    width: 100%;
-    border: none;
-    background: none;
-    padding: 15px 10px;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+  background: #d9ddd8;      /* <<< CINZA + VERDE LEVE */
+  color: #2f3e39;           /* Texto escuro */
 }
 
-.tab-button:hover:not(.active) {
-    background-color: #00695c;
+
+.tab-button svg {
+  font-size: 18px;
+}
+
+.tab-button:hover {
+  background: #c7cdc7;
 }
 
 .tab-button.active {
-    background-color: #b2dfdb; /* Cor de destaque para a aba ativa */
-    color: #004d40;
+  background: #2f3e39;     /* verde escuro elegante */
+  color: white;
+  border-color: #2f3e39;
 }
 
-/* =====================================
-   CONTEÚDO DAS ABAS
-   ===================================== */
+.tab-button:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(90, 109, 96, 0.5);
+    z-index: 1;
+}
+
+
+/* --- ESTILOS DO CONTEÚDO DA ABA (E BOTÕES GERAIS) --- */
 .tab-content {
-    padding: 30px;
+    padding: 30px 25px;
+    background-color: #fff; 
+    width: 100%; 
+    box-sizing: border-box;
 }
 
-.tab-pane h2 {
-    color: #004d40;
-    border-bottom: 2px solid #b2dfdb;
-    padding-bottom: 10px;
+.tab-content h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-text-primary);
+    font-size: 2em;
     margin-top: 0;
+    border-bottom: 1px solid rgba(90, 109, 96, 0.3);
+    padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
-/* Estilo para links externos/botões */
+.tab-content h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-text-primary);
+    margin-top: 40px;
+    border-bottom: 1px solid rgba(90, 109, 96, 0.2); 
+    padding-bottom: 5px;
+}
+
 .btn {
     display: inline-block;
     padding: 12px 25px;
-    margin-top: 20px;
-    background-color: #004d40;
-    color: white !important; /* Força cor branca */
+    background-color: var(--color-accent); 
+    color: var(--color-background-subtle) !important; 
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    border-radius: 8px; 
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .btn:hover {
-    background-color: #00695c;
+    background-color: #4F5E53; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* Estilo para Mapa (Placeholder) */
-.map-placeholder {
-    width: 100%;
-    height: 300px;
-    background-color: #eee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-    border: 1px solid #ccc;
-    color: #777;
-    font-style: italic;
-}
-
-/* =====================================
-   ESTILO DO FORMULÁRIO RSVP
-   ===================================== */
+/* CONTAINER DO FORMULÁRIO */
 .rsvp-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 450px; /* Limita a largura do formulário */
-    margin: 20px 0;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    border: 1px solid rgba(47, 62, 57, 0.10);
 }
 
+/* LABEL */
 .rsvp-form label {
-    margin-top: 15px;
-    font-weight: bold;
-    color: #004d40;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 1.05em;
+    color: var(--color-text-primary);
 }
 
-.rsvp-form input[type="text"], 
+/* CAMPOS DE INPUT */
+.rsvp-form input[type="text"],
 .rsvp-form input[type="number"],
 .rsvp-form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    border: 1.8px solid rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.02em;
+    background: #fafafa;
+    transition: all .3s ease;
 }
 
-.rsvp-form textarea {
-    resize: vertical;
+/* FOCUS ELEGANTE */
+.rsvp-form input[type="text"]:focus,
+.rsvp-form input[type="number"]:focus,
+.rsvp-form textarea:focus {
+    border-color: var(--color-accent);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(47, 62, 57, 0.15);
+    outline: none;
 }
 
+/* BOTÃO */
 .rsvp-form button[type="submit"] {
-    background-color: #004d40;
-    color: white;
-    padding: 12px;
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: var(--color-accent);
+    color: var(--color-background-subtle);
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: 700;
     cursor: pointer;
-    margin-top: 25px;
-    font-size: 1.1em;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
+/* HOVER */
 .rsvp-form button[type="submit"]:hover:not(:disabled) {
-    background-color: #00695c;
+    background-color: #41554f;
+    transform: translateY(-2px);
 }
 
+/* BOTÃO DESABILITADO */
 .rsvp-form button[type="submit"]:disabled {
-    background-color: #a5d6a7; /* Cor clara quando desabilitado (carregando) */
+    background-color: #a7b7a6;
     cursor: not-allowed;
 }
 
+/* IFAMES (MAPA OU OUTROS) */
+iframe {
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
 
-/* =====================================
-   RESPONSIVIDADE
-   ===================================== */
+/* RESPONSIVO */
+@media (max-width: 640px) {
+    .rsvp-form {
+        padding: 25px 20px;
+    }
+}
+
+/* --- RESPONSIVIDADE --- */
+/* Mobile First (Ajustes para Mobile/Tablet) */
+@media (max-width: 600px) {
+  .tab-button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+    .content-wrapper {
+        box-shadow: none;
+    }
+}
+
 @media (max-width: 768px) {
-    .container {
-        margin: 0;
-        border-radius: 0;
-    }
-    header h1 {
-        font-size: 2em;
-    }
     .tab-menu {
-        flex-wrap: wrap; /* Permite que as abas quebrem a linha */
+        flex-wrap: wrap;
     }
+
     .tab-menu li {
-        width: 50%; /* Duas abas por linha em telas pequenas */
+        flex: 1 1 50%; /* duas abas por linha */
+    }
+
+    .tab-button {
+        padding: 14px 10px;
+        font-size: 0.95rem;
     }
 }
 
 @media (max-width: 480px) {
     .tab-menu li {
-        width: 100%; /* Uma aba por linha em telas muito pequenas */
+        flex: 1 1 100%; /* uma aba por linha */
     }
-    .countdown-display {
-        gap: 15px;
-    }
-    .countdown-display span {
-        font-size: 2em;
+
+    .tab-button {
+        padding: 16px 10px;
+        font-size: 1rem;
     }
 }
