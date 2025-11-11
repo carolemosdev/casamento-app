@@ -1,58 +1,58 @@
-import React, { useState } from "react";
-import TabContent from "./TabContent.jsx";
+import { useState } from "react";
+import { FiCheckSquare, FiCoffee, FiGift, FiHome } from "react-icons/fi";
 import CountdownTimer from "./CountdownTimer.jsx";
-import "./styles.css";
 import RSVPForm from "./RSVPForm.jsx";
-import { FiCheckSquare, FiGift, FiHome, FiCoffee} from "react-icons/fi"
+import "./styles.css";
+import TabContent from "./TabContent.jsx";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState(() => {
-  return window.location.hash.replace("#", "") || "rsvp";
-});
+    return window.location.hash.replace("#", "") || "rsvp";
+  });
 
   const tabs = [
-  { id: "rsvp", label: "Confirmação", icon: <FiCheckSquare /> },
-  { id: "presentes", label: "Presentes", icon: <FiGift /> },
-  { id: "cartorio", label: "Cartório", icon: <FiHome /> },
-  { id: "recepcao", label: "Recepção", icon: <FiCoffee /> },
-];
+    { id: "rsvp", label: "Confirmação", icon: <FiCheckSquare /> },
+    { id: "presentes", label: "Presentes", icon: <FiGift /> },
+    { id: "cartorio", label: "Cartório", icon: <FiHome /> },
+    { id: "recepcao", label: "Recepção", icon: <FiCoffee /> },
+  ];
 
   return (
     <div className="container">
-      <div className="content-wrapper"> 
+      <div className="content-wrapper">
         <header>
           <h1> Lívia & Carolina </h1>
           <p>CONTAGEM REGRESSIVA PARA O NOSSO GRANDE DIA:</p>
           <div className="countdown-timer-container">
             <CountdownTimer />
-          </div> 
+          </div>
         </header>
 
-       <ul className="tab-menu">
-  {tabs.map((tab) => (
-    <li key={tab.id}>
-      <button
-        className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
-        onClick={() => {
-          setActiveTab(tab.id);
-          window.history.pushState(null, "", `#${tab.id}`);
-        }}
-      >
-        {tab.icon}
-        {tab.label}
-      </button>
-    </li>
-  ))}
-</ul>
-        
+        <ul className="tab-menu">
+          {tabs.map((tab) => (
+            <li key={tab.id}>
+              <button
+                className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
+                onClick={() => {
+                  setActiveTab(tab.id);
+                  window.history.pushState(null, "", `#${tab.id}`);
+                }}
+              >
+                {tab.icon}
+                {tab.label}
+              </button>
+            </li>
+          ))}
+        </ul>
+
         <div className="tab-content">
-          
+
           <TabContent tabId="cartorio" activeTab={activeTab}>
             <h2>Localização do Cartório</h2>
             <p>
               <strong>Local:</strong> Cartório de Registro Civil de Guanacés
             </p>
-            
+
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63670.17739531186!2d-38.369936494393166!3d-4.144235123609942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b8bde0e95cd017%3A0x52fd8b839dd77587!2sCart%C3%B3rio%20de%20Registro%20Civil%20de%20Guanac%C3%A9s!5e0!3m2!1spt-BR!2sbr!4v1762802889113!5m2!1spt-BR!2sbr"
               width="100%"
@@ -79,7 +79,7 @@ const App = () => {
             <p>
               <strong>Local:</strong> Casa Mãe da Noiva
             </p>
-            
+
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.459910560548!2d-38.24452602497694!3d-4.12953944534439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b897374f9e4a37%3A0xac696df5c5f82201!2sR.%20Samuel%20Bed%C3%AA%2C%202745%20-%20Centro%2C%20Cascavel%20-%20CE%2C%2062850-000!5e0!3m2!1spt-BR!2sbr!4v1762802450876!5m2!1spt-BR!2sbr"
               width="100%"
@@ -131,7 +131,7 @@ const App = () => {
             <p style={{ marginTop: "20px" }}>Chave PIX: <strong>(85) 99802-7939</strong></p>
           </TabContent>
         </div>
-      </div> 
+      </div>
     </div>
   );
 };
