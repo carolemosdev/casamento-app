@@ -311,9 +311,7 @@ iframe {
 }
 
 .gift-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-  filter: brightness(1.1);
+  background: #5b6d5f;
 }
 
 .gift-btn svg {
@@ -436,4 +434,5 @@ iframe {
     flex: 1 1 60px;
     font-size: 0.9rem;
   }
+
 }
