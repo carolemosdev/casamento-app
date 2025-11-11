@@ -6,7 +6,9 @@ import RSVPForm from "./RSVPForm.jsx";
 import { FiCheckSquare, FiGift, FiHome, FiCoffee} from "react-icons/fi"
 
 const App = () => {
-  const [activeTab, setActiveTab] = useState("cartorio");
+  const [activeTab, setActiveTab] = useState(() => {
+  return window.location.hash.replace("#", "") || "rsvp";
+});
 
   const tabs = [
   { id: "rsvp", label: "Confirmação", icon: <FiCheckSquare /> },
@@ -26,12 +28,15 @@ const App = () => {
           </div> 
         </header>
 
-        <ul className="tab-menu">
+       <ul className="tab-menu">
   {tabs.map((tab) => (
     <li key={tab.id}>
       <button
         className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
-        onClick={() => setActiveTab(tab.id)}
+        onClick={() => {
+          setActiveTab(tab.id);
+          window.history.pushState(null, "", `#${tab.id}`);
+        }}
       >
         {tab.icon}
         {tab.label}

@@ -207,13 +207,11 @@ header p {
 
 /* CONTAINER DO FORMULÁRIO */
 .rsvp-form {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 40px 30px;
-    background: #ffffff;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-    border: 1px solid rgba(47, 62, 57, 0.10);
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 /* LABEL */
@@ -286,10 +284,15 @@ iframe {
 }
 
 /* RESPONSIVO */
-@media (max-width: 640px) {
-    .rsvp-form {
-        padding: 25px 20px;
-    }
+@media (max-width: 600px) {
+  .rsvp-form {
+    padding: 1.5rem;
+  }
+
+  .rsvp-form input,
+  .rsvp-form textarea {
+    font-size: 1rem;
+  }
 }
 
 /* --- RESPONSIVIDADE --- */
