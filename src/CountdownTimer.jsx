@@ -47,7 +47,7 @@ const CountdownTimer = () => {
     }
 
     return (
-        <div className="countdown-display" style={{ display: 'flex', justifyContent: 'center', gap: '20px', padding: '10px 0' }}>
+        <div className="countdown-display">
             {Object.entries(timeLeft).map(([unit, value]) => (
                 <div key={unit} style={{ textAlign: 'center', color: '#004d40' }}>
                     <span style={{ fontSize: '2.5em', fontWeight: 'bold' }}>{value.toString().padStart(2, '0')}</span>

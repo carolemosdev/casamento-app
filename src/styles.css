@@ -78,11 +78,13 @@ header p {
 }
 
 .countdown-display {
-    justify-content: center;
-    gap: 15px; 
+    display: flex;
+    gap: 15px;
+    justify-content: center; 
+    flex-wrap: wrap;
     font-size: 1.8em;
     font-weight: 600;
-    color: var(--color-text-primary); 
+    color:var(--color-text-primary);
 }
 
 .countdown-display div {
