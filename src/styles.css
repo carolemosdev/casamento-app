@@ -299,19 +299,18 @@ iframe {
   align-items: center;
   gap: 10px;
   justify-content: center;
-  background: linear-gradient(90deg, #6a7f6e, #4f5e53);
+  background: #6a7f6e;
   color: #fff;
   padding: 14px 22px;
   font-size: 1.1em;
   font-weight: 600;
   border-radius: 12px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: background 0.3s ease;
 }
 
 .gift-btn:hover {
-  background: #5b6d5f;
+  background: #4f5e53; 
 }
 
 .gift-btn svg {
@@ -436,3 +435,4 @@ iframe {
   }
 
 }
+
