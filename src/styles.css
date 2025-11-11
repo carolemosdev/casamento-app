@@ -294,6 +294,36 @@ iframe {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
 }
 
+.gift-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  background: linear-gradient(90deg, #6a7f6e, #4f5e53);
+  color: #fff;
+  padding: 14px 22px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.gift-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  filter: brightness(1.1);
+}
+
+.gift-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.gift-btn:hover svg {
+  transform: scale(1.2);
+}
+
 /* RESPONSIVO */
 @media (max-width: 600px) {
   .rsvp-form {

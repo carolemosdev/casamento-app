@@ -116,13 +116,14 @@ const App = () => {
               Para ver nossa lista completa de sugestões, clique no link abaixo:
             </p>
             <a
-              href="https://docs.google.com/spreadsheets/d/1A7CzOQBuRePKqbw0AyZq1rtZk45R9lVTZCnqohquXLw/edit?usp=sharing"
-              target="_blank"
-              className="btn"
-              rel="noopener noreferrer"
-            >
-              🎁 Acessar Nossa Lista de Presentes 🎁
-            </a>
+               href="https://docs.google.com/spreadsheets/d/1A7CzOQBuRePKqbw0AyZq1rtZk45R9lVTZCnqohquXLw/edit?usp=sharing"
+               target="_blank"
+               rel="noopener noreferrer"
+              className="gift-btn"
+                >
+              <FiGift size={20} />
+                Acessar Nossa Lista de Presentes
+              </a>
             <h3 style={{ marginTop: "30px" }}>Cotas de Lua de Mel / PIX</h3>
             <p>
               Ajude-nos a realizar a viagem dos sonhos ou use a praticidade do
