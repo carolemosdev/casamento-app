@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const RSVPForm = () => {
   const FORM_ENDPOINT = "https://formsubmit.co/carolina.contato85@gmail.com";
@@ -81,6 +81,7 @@ const RSVPForm = () => {
           onChange={handleChange}
           required
           disabled={isLoading}
+          style={{ color: "var(--color-text-body)" }}
         />
 
         <label htmlFor="mensagem">
@@ -93,6 +94,7 @@ const RSVPForm = () => {
           onChange={handleChange}
           rows="4"
           disabled={isLoading}
+          style={{ color: "var(--color-text-body)" }}
         ></textarea>
 
         <button type="submit" disabled={isLoading}>

@@ -5,102 +5,104 @@
 
 /* --- Variáveis CSS para Cores (Paleta Verde Sálvia/Orgânica) --- */
 :root {
-    --color-background-subtle: #FDFCF9;
-    --color-text-primary: #5A6D60;
-    --color-text-secondary: #8FA295;
-    --color-accent: #5A6D60;
-    --color-text-body: #4F4F4F;
+  --color-background-subtle: #FDFCF9;
+  --color-text-primary: #5A6D60;
+  --color-text-secondary: #8FA295;
+  --color-accent: #5A6D60;
+  --color-text-body: #4F4F4F;
 }
 
 /* --- ESTILOS GERAIS --- */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--color-background-subtle);
-    color: var(--color-text-body);
-    line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background-subtle);
+  color: var(--color-text-body);
+  line-height: 1.6;
+  justify-content: center;
 }
 
 .container {
-    width: 100%; 
-    margin: 0; 
-    min-height: 100vh;
-    background-color: var(--color-background-subtle);
-    background-image: url('https://i.imgur.com/G4hU07k.png'); 
-    background-size: cover;
-    background-position: center;
-    box-shadow: none;
-    border-radius: 0;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
+  width: 100%;
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-background-subtle);
+  background-image: url('https://i.imgur.com/G4hU07k.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: none;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content-wrapper {
-    max-width: 900px; 
-    width: 100%; /* Ocupa 100% da largura máxima permitida */
-    margin: 0 auto; 
-    background-color: #fff; 
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  width: 100%;
+  /* Ocupa 100% da largura máxima permitida */
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
 /* --- ESTILOS DO CABEÇALHO --- */
 header {
-    text-align: center;
-    padding: 60px 20px 30px;
-    background-color: transparent; 
+  text-align: center;
+  padding: 60px 20px 30px;
+  background-color: transparent;
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif; 
-    color: var(--color-text-primary);
-    margin: 0 0 10px 0; 
-    font-size: 3.8em; 
-    font-style: italic; 
-    font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  color: var(--color-text-primary);
+  margin: 0 0 10px 0;
+  font-size: 3.8em;
+  font-style: italic;
+  font-weight: 500;
 }
 
-header p { 
-    font-family: 'Montserrat', sans-serif;
-    color: var(--color-text-secondary);
-    font-size: 0.9em;
-    letter-spacing: 3px; 
-    text-transform: uppercase;
-    margin-bottom: 5px;
+header p {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-text-secondary);
+  font-size: 0.9em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
-.countdown-timer-container { 
-    margin-top: 20px; 
-    padding-top: 15px;
-    border-top: 1px solid rgba(90, 109, 96, 0.3); 
-    display: inline-block; 
+.countdown-timer-container {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(90, 109, 96, 0.3);
+  display: inline-block;
 }
 
 .countdown-display {
-    display: flex;
-    gap: 15px;
-    justify-content: center; 
-    flex-wrap: wrap;
-    font-size: 1.8em;
-    font-weight: 600;
-    color:var(--color-text-primary);
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 1.8em;
+  font-weight: 600;
+  color: var(--color-text-primary);
 }
 
 .countdown-display div {
-    padding: 5px 10px;
-    background-color: rgba(90, 109, 96, 0.05); 
-    border-radius: 4px;
-    text-align: center; 
+  padding: 5px 10px;
+  background-color: rgba(90, 109, 96, 0.05);
+  border-radius: 4px;
+  text-align: center;
 }
 
 .countdown-display span {
-    display: block;
-    font-size: 0.5em; 
-    color: var(--color-text-secondary); 
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  display: block;
+  font-size: 0.5em;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 
@@ -117,11 +119,13 @@ header p {
 }
 
 .tab-menu::-webkit-scrollbar {
-  display: none;             /* Chrome remove scroll */
+  display: none;
+  /* Chrome remove scroll */
 }
 
 .tab-menu li {
-    flex: 1; /* Agora cada aba ocupa o mesmo espaço automaticamente */
+  flex: 1;
+  /* Agora cada aba ocupa o mesmo espaço automaticamente */
 }
 
 .tab-button {
@@ -135,8 +139,12 @@ header p {
   cursor: pointer;
   transition: 0.3s ease;
   border: 2px solid transparent;
-  background: #d9ddd8;      /* <<< CINZA + VERDE LEVE */
-  color: #2f3e39;           /* Texto escuro */
+  background: #d9ddd8;
+  /* <<< CINZA + VERDE LEVE */
+  color: #2f3e39;
+  /* Texto escuro */
+  width: 100%;
+  justify-content: center;
 }
 
 
@@ -149,62 +157,63 @@ header p {
 }
 
 .tab-button.active {
-  background: #2f3e39;     /* verde escuro elegante */
+  background: #2f3e39;
+  /* verde escuro elegante */
   color: white;
   border-color: #2f3e39;
 }
 
-.tab-button:focus{
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(90, 109, 96, 0.5);
-    z-index: 1;
+.tab-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(90, 109, 96, 0.5);
+  z-index: 1;
 }
 
 
 /* --- ESTILOS DO CONTEÚDO DA ABA (E BOTÕES GERAIS) --- */
 .tab-content {
-    padding: 30px 25px;
-    background-color: #fff; 
-    width: 100%; 
-    box-sizing: border-box;
+  padding: 30px 25px;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .tab-content h2 {
-    font-family: 'Playfair Display', serif;
-    color: var(--color-text-primary);
-    font-size: 2em;
-    margin-top: 0;
-    border-bottom: 1px solid rgba(90, 109, 96, 0.3);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  color: var(--color-text-primary);
+  font-size: 2em;
+  margin-top: 0;
+  border-bottom: 1px solid rgba(90, 109, 96, 0.3);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .tab-content h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--color-text-primary);
-    margin-top: 40px;
-    border-bottom: 1px solid rgba(90, 109, 96, 0.2); 
-    padding-bottom: 5px;
+  font-family: 'Playfair Display', serif;
+  color: var(--color-text-primary);
+  margin-top: 40px;
+  border-bottom: 1px solid rgba(90, 109, 96, 0.2);
+  padding-bottom: 5px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: var(--color-accent); 
-    color: var(--color-background-subtle) !important; 
-    text-decoration: none;
-    border-radius: 8px; 
-    margin-top: 20px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--color-accent);
+  color: var(--color-background-subtle) !important;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
-    background-color: #4F5E53; 
-    transform: translateY(-2px); 
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  background-color: #4F5E53;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* CONTAINER DO FORMULÁRIO */
@@ -218,71 +227,71 @@ header p {
 
 /* LABEL */
 .rsvp-form label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    font-size: 1.05em;
-    color: var(--color-text-primary);
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: var(--color-text-primary);
 }
 
 /* CAMPOS DE INPUT */
 .rsvp-form input[type="text"],
 .rsvp-form input[type="number"],
 .rsvp-form textarea {
-    width: 100%;
-    padding: 14px 18px;
-    margin-bottom: 22px;
-    border: 1.8px solid rgba(0, 0, 0, 0.15);
-    border-radius: 12px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.02em;
-    background: #fafafa;
-    transition: all .3s ease;
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 22px;
+  border: 1.8px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.02em;
+  background: #fafafa;
+  transition: all .3s ease;
 }
 
 /* FOCUS ELEGANTE */
 .rsvp-form input[type="text"]:focus,
 .rsvp-form input[type="number"]:focus,
 .rsvp-form textarea:focus {
-    border-color: var(--color-accent);
-    background: #fff;
-    box-shadow: 0 0 0 3px rgba(47, 62, 57, 0.15);
-    outline: none;
+  border-color: var(--color-accent);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(47, 62, 57, 0.15);
+  outline: none;
 }
 
 /* BOTÃO */
 .rsvp-form button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 16px;
-    background-color: var(--color-accent);
-    color: var(--color-background-subtle);
-    border: none;
-    border-radius: 50px;
-    font-size: 1.2em;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background-color: var(--color-accent);
+  color: var(--color-background-subtle);
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 /* HOVER */
 .rsvp-form button[type="submit"]:hover:not(:disabled) {
-    background-color: #41554f;
-    transform: translateY(-2px);
+  background-color: #41554f;
+  transform: translateY(-2px);
 }
 
 /* BOTÃO DESABILITADO */
 .rsvp-form button[type="submit"]:disabled {
-    background-color: #a7b7a6;
-    cursor: not-allowed;
+  background-color: #a7b7a6;
+  cursor: not-allowed;
 }
 
 /* IFAMES (MAPA OU OUTROS) */
 iframe {
-    border-radius: 14px;
-    margin-bottom: 25px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  border-radius: 14px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
 }
 
 /* RESPONSIVO */
@@ -307,28 +316,28 @@ iframe {
 }
 
 @media (max-width: 900px) {
-    .content-wrapper {
-        box-shadow: none;
-    }
+  .content-wrapper {
+    box-shadow: none;
+  }
 }
 
 @media (max-width: 768px) {
   .tab-menu {
     flex-wrap: wrap;
-    justify-content: center; 
-    gap: 10px; 
+    justify-content: center;
+    gap: 10px;
     padding: 10px 0;
   }
 
   .tab-menu li {
-    flex: 1 1 45%; 
+    flex: 1 1 45%;
     display: flex;
     justify-content: center;
   }
 
   .tab-button {
     width: 100%;
-    max-width: 180px; 
+    max-width: 180px;
     text-align: center;
     padding: 14px 10px;
     font-size: 0.95rem;
@@ -337,7 +346,7 @@ iframe {
 
 @media (max-width: 480px) {
   .tab-menu li {
-    flex: 1 1 100%; 
+    flex: 1 1 100%;
     justify-content: center;
   }
 
@@ -348,51 +357,53 @@ iframe {
   }
 }
 
-html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-::before, ::after {
-    box-sizing: inherit;
+::before,
+::after {
+  box-sizing: inherit;
 }
 
 .container {
-    max-width: 100vw;
-    overflow-x: hidden;
-    padding: 0;
-    margin: 0 auto;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0 auto;
 }
 
 iframe {
-    max-width: 100%;
-    width: 100%;
-    display: block;
+  max-width: 100%;
+  width: 100%;
+  display: block;
 }
 
-.countdown{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    overflow-x: hidden;
-    padding: 0 8px;
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0 8px;
 }
 
 .countdown-item {
-    flex: 1 1 70px;
-    min-width: 70px;
-    text-align: center;
+  flex: 1 1 70px;
+  min-width: 70px;
+  text-align: center;
 }
 
 @media (max-width: 400px) {
-    .countdown-item {
-        flex: 1 1 60px;
-        font-size: 0.9rem;
-    }
+  .countdown-item {
+    flex: 1 1 60px;
+    font-size: 0.9rem;
+  }
 }
