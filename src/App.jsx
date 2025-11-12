@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiCheckSquare, FiCoffee, FiGift, FiHome } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 import CountdownTimer from "./CountdownTimer.jsx";
 import RSVPForm from "./RSVPForm.jsx";
 import "./styles.css";
@@ -46,7 +47,6 @@ const App = () => {
         </ul>
 
         <div className="tab-content">
-
           <TabContent tabId="cartorio" activeTab={activeTab}>
             <h2>Localização do Cartório</h2>
             <p>
@@ -115,21 +115,45 @@ const App = () => {
             <p>
               Para ver nossa lista completa de sugestões, clique no link abaixo:
             </p>
+
             <a
-               href="https://docs.google.com/spreadsheets/d/1A7CzOQBuRePKqbw0AyZq1rtZk45R9lVTZCnqohquXLw/edit?usp=sharing"
-               target="_blank"
-               rel="noopener noreferrer"
+              href="https://docs.google.com/spreadsheets/d/1A7CzOQBuRePKqbw0AyZq1rtZk45R9lVTZCnqohquXLw/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="gift-btn"
-                >
+            >
               <FiGift size={20} />
-                Acessar Nossa Lista de Presentes
-              </a>
+              Acessar Nossa Lista de Presentes
+            </a>
+
             <h3 style={{ marginTop: "30px" }}>Cotas de Lua de Mel / PIX</h3>
             <p>
               Ajude-nos a realizar a viagem dos sonhos ou use a praticidade do
               PIX:
             </p>
-            <p style={{ marginTop: "20px" }}>Chave PIX: <strong>(85) 99802-7939</strong></p>
+            <div className="pix-container">
+              <p className="pix-text">
+                Chave PIX: <strong>(85) 99802-7939</strong>
+              </p>
+              <button
+                className="pix-btn"
+                onClick={() => {
+                  navigator.clipboard.writeText("(85) 99802-7939");
+                  alert("Chave PIX copiada com sucesso!");
+                }}
+              >
+                Copiar Chave PIX
+              </button>
+            </div>
+            <a
+              href="https://wa.me/5585998027939?text=Olá!%20Gostaria%20de%20falar%20sobre%20o%20casamento%20de%20Lívia%20e%20Carolina."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whatsapp-btn"
+            >
+              <FaWhatsapp size={22} />
+              Entrar em Contato pelo WhatsApp
+            </a>
           </TabContent>
         </div>
       </div>
