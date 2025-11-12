@@ -300,7 +300,7 @@ iframe {
   justify-content: center;
   gap: 10px;
   background: linear-gradient(135deg, #6d7e71, #5a6d60); /* degradê sálvia */
-  color: #fff;
+  color: #ffffff !important; /* força texto branco */
   padding: 14px 26px;
   font-size: 1.1em;
   font-weight: 600;
@@ -314,9 +314,11 @@ iframe {
   background: linear-gradient(135deg, #5a6d60, #4f5e53);
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+  color: #ffffff !important;
 }
 
 .gift-btn svg {
+  color: #ffffff; /* ícone branco */
   transition: transform 0.3s ease;
 }
 
