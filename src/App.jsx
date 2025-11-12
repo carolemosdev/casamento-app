@@ -126,10 +126,9 @@ const App = () => {
               Acessar Nossa Lista de Presentes
             </a>
 
-            <h3 style={{ marginTop: "30px" }}>Cotas de Lua de Mel / PIX</h3>
+            <h3 style={{ marginTop: "30px" }}>PIX</h3>
             <p>
-              Ajude-nos a realizar a viagem dos sonhos ou use a praticidade do
-              PIX:
+              Ou use a praticidade do PIX:
             </p>
             <div className="pix-container">
               <p className="pix-text">
@@ -152,7 +151,7 @@ const App = () => {
               className="whatsapp-btn"
             >
               <FaWhatsapp size={22} />
-              Entrar em Contato pelo WhatsApp
+              Entre em Contato pelo WhatsApp
             </a>
           </TabContent>
         </div>
