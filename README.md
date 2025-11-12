@@ -48,4 +48,4 @@ Siga os passos abaixo para configurar e executar o projeto em sua máquina:
 
 📄 Licença
 
-Este projeto está sob a licença [MIT](LICENSE.md).
+Este projeto está sob a licença [MIT](LICENSE.md) - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes.
